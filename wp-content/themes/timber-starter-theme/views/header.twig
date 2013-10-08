@@ -1,0 +1,30 @@
+<header class="header" >
+
+    {% block header %}
+    {# <div class="wrapper"> #}
+        <h1 class="hdr-logo" role="banner">
+            <a class="logo-link" href="/" title="Marc Wensauer" rel="home">Marc Wensauer</a>
+        </h1>
+        <nav id="main-navigation-container" role="navigation">
+            {{wp_nav_menu}}
+        </nav>    
+    {# </div> #}
+    {% endblock %}
+
+</header>
+
+
+{# 
+generated code from wp_nav_menu:
+<nav id="main-navigation-container" role="navigation">
+
+            <div class="nav-menu">
+                <ul>
+                    <li class="page_item page-item-2 current_page_item">
+                        <a href="http://wp.marcwensauer/?page_id=2">Sample Page</a>
+                    </li>
+                </ul>
+            </div>
+
+</nav> 
+#}

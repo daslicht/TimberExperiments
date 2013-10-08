@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{language_attributes}}> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{language_attributes}}> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{language_attributes}}> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" {{language_attributes}}> <!--<![endif]-->
+
+    {% include 'html-header.twig' %}  
+
+    <body class="{{body_class}}" data-source="base.twig">
+        {#<canvas style="display:none" id="canvas" width="570" height="570"></canvas>#}
+        {#<canvas style="display:none" id="canvas3" width="570" height="570"></canvas>#}
+        {#<canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>#}
+        <div id='main-container'>          
+            {% include 'header.twig' %}
+            <section id="content" role="main" class="wrapper">
+                {% if title %}<h1>{{title}}</h1>{% endif %}
+
+                <div class="wrapper {{sidebar_class}}">
+                    {% block content %}
+                        Sorry, no content
+                    {% endblock %}
+                </div>
+
+                {% if sidebar %}
+                    <aside class="layout-sidebar">
+                        {{sidebar}}
+                    </aside>
+                {% endif %}
+            </section>
+            {% include 'footer.twig' %}
+        </div>
+        {# Include Wordpress Footer which contains enqueued  scripts see functions.php #}
+        {{ wp_footer }}
+    </body>
+
+</html>
