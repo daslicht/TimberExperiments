@@ -3,7 +3,7 @@
 Plugin Name: Timber
 Description: The WordPress Timber Library allows you to write themes using the power Twig templates
 Author: Jared Novack + Upstatement
-Version: 0.13.5
+Version: 0.14.0
 Author URI: http://timber.upstatement.com/
 */
 
@@ -11,8 +11,8 @@ global $wp_version;
 global $timber;
 
 require_once(__DIR__ . '/functions/functions-twig.php');
-require_once(__DIR__ . '/functions/functions-wp-helper.php');
-require_once(__DIR__ . '/functions/functions-wp-image-helper.php');
+require_once(__DIR__ . '/functions/functions-timber-helper.php');
+require_once(__DIR__ . '/functions/functions-timber-image-helper.php');
 
 require_once(__DIR__ . '/functions/timber-core.php');
 require_once(__DIR__ . '/functions/timber-post.php');
@@ -22,8 +22,10 @@ require_once(__DIR__ . '/functions/timber-term.php');
 require_once(__DIR__ . '/functions/timber-term-getter.php');
 require_once(__DIR__ . '/functions/timber-image.php');
 require_once(__DIR__ . '/functions/timber-menu.php');
+require_once(__DIR__ . '/functions/timber-theme.php');
 
 require_once(__DIR__ . '/functions/timber-loader.php');
+require_once(__DIR__ . '/functions/timber-function-wrapper.php');
 
 require_once(__DIR__ . '/admin/timber-admin.php');
 
@@ -51,8 +53,18 @@ class Timber {
     protected $router;
 
     public function __construct(){
+        $this->test_compatibility();
         $this->init_constants();
         add_action('init', array(&$this, 'init_routes'));
+    }
+
+    protected function test_compatibility(){
+        if (is_admin() || $_SERVER['PHP_SELF'] == '/wp-login.php'){
+            return;
+        }
+        if (version_compare(phpversion(), '5.3.0', '<') && !is_admin()) {
+            trigger_error('Timber requires PHP 5.3.0 or greater. You have '.phpversion(), E_USER_ERROR);
+        }
     }
 
     protected function init_constants() {
@@ -90,7 +102,7 @@ class Timber {
             $PostClass = $query;
             $query = false;
         }
-        if (WPHelper::is_array_assoc($query) || (is_string($query) && strstr($query, '='))) {
+        if (TimberHelper::is_array_assoc($query) || (is_string($query) && strstr($query, '='))) {
         // we have a regularly formed WP query string or array to use
             return self::get_posts_from_wp_query($query, $PostClass);
         } else if (is_string($query) && !is_integer($query)) {
@@ -111,8 +123,8 @@ class Timber {
             //return self::get_posts_from_wp_query(array(), $PostClass);
             return null;
         } else {
-            error_log('I have failed you! in timber.php::94');
-            WPHelper::error_log($query);
+            TimberHelper::error_log('I have failed you! in timber.php::94');
+            TimberHelper::error_log($query);
         }
         return $query;
     }
@@ -157,11 +169,11 @@ class Timber {
             $q = array_filter($q);
             $q = array_values($q);
             if (count($q) == 1){
-                $query = "SELECT ID FROM $wpdb->posts WHERE post_name = '$q[0]'";
+                $query = $wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_name = %s", $q[0]);
             } else if (count($q) == 2){
-                $query = "SELECT ID FROM $wpdb->posts WHERE post_name = '$q[1]' AND post_type = '$q[0]'";
+                $query = $wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE post_name = %s AND post_type = %s LIMIT 1", $q[1], $q[0]);
             } else {
-                error_log('something we dont understand about '.$slug);
+                TimberHelper::error_log('something we dont understand about '.$slug);
             }
         }
         $results = $wpdb->get_col($query);
@@ -177,10 +189,7 @@ class Timber {
         if (!is_array($query) || !count($query)) {
             return null;
         }
-        global $wpdb;
-        $query_list = implode(', ', $query);
-        $results = $wpdb->get_col("SELECT ID FROM $wpdb->posts WHERE ID IN ($query_list)");
-        $results = array_intersect($query, $results);
+        $results = get_posts(array('post_type'=>'any', 'post__in' =>$query, 'orderby' => 'post__in'));
         return self::handle_post_results($results, $PostClass);
     }
 
@@ -195,9 +204,9 @@ class Timber {
                     $PostClassUse = $PostClass[$post_type];
                 } else {
                     if (is_array($PostClass)) {
-                        error_log($post_type.' of '.$rid.' not found in ' . print_r($PostClass, true));
+                        TimberHelper::error_log($post_type.' of '.$rid.' not found in ' . print_r($PostClass, true));
                     } else {
-                        error_log($post_type.' not found in '.$PostClass);
+                        TimberHelper::error_log($post_type.' not found in '.$PostClass);
                     }
                 }
             }
@@ -244,7 +253,7 @@ class Timber {
             //its just a string with a single taxonomy
             $parsed = TimberTermGetter::get_term_query_from_string($args);
             return self::handle_term_query($parsed->taxonomies, $parsed->args, $TermClass);
-        } else if (is_array($args) && WPHelper::is_array_assoc($args)){
+        } else if (is_array($args) && TimberHelper::is_array_assoc($args)){
             //its an associative array, like a good ole query
             $parsed = TimberTermGetter::get_term_query_from_assoc_array($args);
             return self::handle_term_query($parsed->taxonomies, $parsed->args, $TermClass);
@@ -274,14 +283,14 @@ class Timber {
         $data = array();
         $data['http_host'] = 'http://' . $_SERVER['HTTP_HOST'];
         $data['wp_title'] = get_bloginfo('name');
-        $data['wp_head'] = WPHelper::ob_function('wp_head');
-        $data['wp_footer'] = WPHelper::ob_function('wp_footer');
+        $data['wp_head'] = TimberHelper::function_wrapper('wp_head');
+        $data['wp_footer'] = TimberHelper::function_wrapper('wp_footer');
         $data['body_class'] = implode(' ', get_body_class());
         if (function_exists('wp_nav_menu')) {
             $data['wp_nav_menu'] = wp_nav_menu(array('container_class' => 'menu-header', 'echo' => false, 'menu_class' => 'nav-menu'));
         }
         $data['theme_dir'] = str_replace($_SERVER['DOCUMENT_ROOT'], '', get_stylesheet_directory());
-        $data['language_attributes'] = WPHelper::ob_function('language_attributes');
+        $data['language_attributes'] = TimberHelper::function_wrapper('language_attributes');
         $data['stylesheet_uri'] = get_stylesheet_uri();
         $data['template_uri'] = get_template_directory_uri();
         $data = apply_filters('timber_context', $data);
@@ -330,7 +339,7 @@ class Timber {
             }
         }
         if (!$found) {
-            error_log('error loading your sidebar, check to make sure the file exists');
+            TimberHelper::error_log('error loading your sidebar, check to make sure the file exists');
         }
         $ret = ob_get_contents();
         ob_end_clean();
@@ -341,7 +350,7 @@ class Timber {
     ================================ */
 
     public static function get_widgets($widget_id){
-        return WPHelper::ob_function('dynamic_sidebar', array($widget_id));
+        return TimberHelper::ob_function('dynamic_sidebar', array($widget_id));
     }
 
 
@@ -371,13 +380,31 @@ class Timber {
         $timber->router->map($route, $callback);
     }
 
-    public static function load_template($template, $query = false) {
+
+    public static function load_template($template, $query = false, $force_header = 0) {
         $template = locate_template($template);
 
+        if ($force_header) {
+            add_filter('status_header', function($status_header, $header, $text, $protocol) use ($force_header) {
+                $text = get_status_header_desc($force_header);
+                return "$protocol $force_header $text";
+            }, 10, 4 );
+        }
+
         if ($query) {
-            add_action('do_parse_request',function() use ($query) {
+            add_action('do_parse_request', function() use ($query) {
                 global $wp;
-                $wp->query_vars = $query;
+
+                if ( is_callable($query) )
+                    $query = call_user_func($query);
+
+                if ( is_array($query) )
+                    $wp->query_vars = $query;
+                elseif ( !empty($query) )
+                    parse_str($query, $wp->query_vars);
+                else
+                    return true; // Could not interpret query. Let WP try.
+
                 return false;
             });
         }
@@ -408,7 +435,7 @@ class Timber {
         $args['base'] = trailingslashit(get_pagenum_link(0)).'%_%';
         $args['prev_next'] = false;
         $args = array_merge($args, $prefs);
-        $data['pages'] = WPHelper::paginate_links($args);
+        $data['pages'] = TimberHelper::paginate_links($args);
         $next = next_posts($args['total'], false);
         if ($next){
             $data['next'] = array('link' => $next);

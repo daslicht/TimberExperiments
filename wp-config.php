@@ -3,8 +3,11 @@
  * @package WordPress
  */
 
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+
 $debug = true;
-if(debug){
+if(false){
     // Enable WP_DEBUG mode
     define('WP_DEBUG', true);
     // Enable Debug logging to the /wp-content/debug.log file
@@ -81,7 +84,15 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
+
+define('MULTISITE', true);
+define('SUBDOMAIN_INSTALL', false);
+define('DOMAIN_CURRENT_SITE', 'wp.marcwensauer');//wp.marcwensauer
+define('PATH_CURRENT_SITE', '/');
+define('SITE_ID_CURRENT_SITE', 1);
+define('BLOG_ID_CURRENT_SITE', 1);
+define( 'SUNRISE', 'on' );
 
 /* That's all, stop editing! Happy blogging. */
 

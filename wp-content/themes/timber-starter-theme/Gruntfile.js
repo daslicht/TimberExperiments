@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     recess: {
       dist: {
         options: {
-          compile: true,
+          compile: true
           //compress: true
         },
         files: {
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
         ],
         tasks: ['recess'],
         options: {
-            livereload: true,
-        },
+            livereload: true
+        }
       }
 
     }

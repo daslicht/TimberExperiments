@@ -34,8 +34,8 @@ class TimberTerm extends TimberCore {
 		} else if (isset($term->term_id)) {
 			$term->ID = $term->term_id;
 		} else if (is_string($tid)) {
-			echo 'bad call using '.$tid;
-			//WPHelper::error_log(debug_backtrace());
+			//echo 'bad call using '.$tid;
+			//TimberHelper::error_log(debug_backtrace());
 		}
 		if (function_exists('get_fields')) {
 			//lets get whatever we can from advanced custom fields;
@@ -63,7 +63,7 @@ class TimberTerm extends TimberCore {
 		}
 		$tid = self::get_tid($tid);
 		global $wpdb;
-		$query = "SELECT * FROM $wpdb->term_taxonomy WHERE term_id = '$tid'";
+		$query = "SELECT * FROM $wpdb->term_taxonomy WHERE term_id = '$tid' LIMIT 1";
 		$tax = $wpdb->get_row($query);
 		if (isset($tax) && isset($tax->taxonomy)) {
 			if ($tax->taxonomy) {

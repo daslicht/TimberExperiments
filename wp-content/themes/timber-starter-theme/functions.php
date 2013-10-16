@@ -54,15 +54,5 @@ Timber::add_route('blog/:name', function($params){
 		"category_name" => $params['name']
 	);
 	Timber::load_template('index.php', $query);
-   /* $context = Timber::get_context();
 
-    $args = 'category_name='.$params['name'];*/
-
-	/*$posts = Timber::get_posts($args);
-	$context['posts'] = $posts;
-
-	Timber::render('index.twig', $context);*/
-
-    
-   // echo "hallo welt";
 });

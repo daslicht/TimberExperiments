@@ -1,0 +1,247 @@
+
+@import "lib.less";
+
+#content_container {
+  padding: 26px;
+  height:472px;
+
+
+}
+    #content_container h2 {
+      font-family: Play;
+      font-size:16px;
+    }
+
+    #content_container .section {
+      margin-bottom: 18px;
+    }
+
+    #content_container .section p {
+      line-height: 1.8;
+    /*padding:15px;*/
+      font-family: Jura;
+      word-spacing: 0.2em;
+      padding-right:10px;
+      padding-bottom:10px;
+    }
+
+
+header h1{
+  margin-left: 25px;
+  font-family: Jura;
+/*text-shadow: 1px 1px 0px #ffffff;*/
+}
+
+header h2 {
+  font-size: 14px;
+  font-family: Play;
+  margin-left: 27px;
+  line-height: 2;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+
+
+
+
+.contact_form {
+  margin-top: 34px !important;
+}
+    contact_form .contact_row {
+      margin-bottom: 25px;
+    /*background-color: red;*/
+    }
+
+    .contact_form  .last {
+      margin-bottom: 0 !important;
+    }
+    .contact_form .contact_row label{
+      width:150px;
+      text-align: right;
+      margin-right: 15px;
+      float:left;
+      font-family: Jura;
+      margin-top:5px;
+    }
+    .contact_form .contact_row input,
+    .contact_form .contact_row  textarea
+    {
+      background:  rgba(255,255,255,0.75);
+      .border-radius(5px,5px,5px,5px);
+
+      font-size:14px;
+      font-family: Jura;
+      border: 1px solid rgba(69, 88, 104,0.25);
+      padding:5px;
+      width:200px;
+
+      color: #3D4470;
+    }
+    .contact_form .contact_row  textarea{
+      height:124px;
+      width:324px;
+    }
+
+    .contact_row .submit {
+      .border-radius(5px,5px,5px,5px);
+      margin-left:400px;
+      font-family: Jura;
+      color: #ffffff;
+      font-size: 16px;
+      padding: 5px;
+      width:100px;
+      text-decoration: none;
+      border: 1px solid #84a8f0;
+      background-color: #94A2AF;
+      display:inline-block; /* IE is so silly */
+      margin-bottom:25px;
+      margin-top:10px;
+    }
+
+    .contact_row .submit:hover {
+    /*background: #8c9ade;*/
+      opacity:0.75;
+    }
+
+
+
+#main_container {
+  width:960px;
+  height:100%;
+  margin: 30px auto 0;
+  padding-top: 15px;
+  background:  rgba(255,255,255,0.75);
+  //.borderRadius( @top-left, @top-right, @bottom-left, @bottom-right )
+  .border-radius(5px,5px,5px,5px);
+  .box-shadow(0px, 6px, 13px, 1px, rgba(0, 0, 0, 0.25));
+
+
+}
+
+#canvas2{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top:0;
+}
+
+body {
+  color:@main-font-color;
+
+}
+
+nav {
+  height: 30px;
+  width: 100%;
+  background: rgba(69, 88, 104, 0.5);
+
+  border-bottom: 2px solid rgba(69, 88, 104, 0.5);
+  margin-top: 15px;
+}
+    nav ul {
+      padding: 0;
+      width: 244px;
+      height: 30px;
+      margin-left: 12px;
+    }
+
+    nav li {
+      display: inline;
+      float: left;
+    }
+
+    nav a {
+      padding-left:15px;
+      padding-right:15px;
+      color: #fff;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      line-height: 31px;
+      padding-top: 1px;
+    }
+
+    nav li a {
+      border-right: 1px solid #576979;
+      .box-sizing(border-box);
+      .transition(color,125ms);
+    }
+
+    nav li:last-child a {
+      border-right: 0;
+    }
+
+    body.no-jQuery nav a:hover, body.no-jQuery nav a:active, nav .active {
+      color:@active-color;
+      //background-color: #8c99a4;
+      // text-shadow: 1px 1px 0px #283744;
+    }
+
+
+#imprint {
+  width: 500px;
+}
+
+
+#imprint h5, #imprint p {
+  font-family: Play;
+  font-size: 14px;
+}
+
+#imprint p {
+  font-family: Play;
+  font-size: 12px;
+}
+
+.notice {
+  width: 100%;
+  height: 50px;
+  background: rgba(255,0,0,0.25);
+  .border-radius(5px,5px,5px,5px);
+  display:none
+}
+.v_error {
+  opacity:0;
+  margin-left: 171px;
+  color:red;
+}
+
+#email_sent img {
+  float:left;
+  opacity:0.75;
+  margin-right:10px;
+}
+#email_sent{
+
+  opacity:0;
+  position:absolute;
+  display:none;
+}
+#email_sent p {
+  float:left;
+}
+
+
+footer{
+  width:250px;
+  margin:0 auto;
+  text-align: center;
+
+  opacity:.75;
+  margin-bottom: 5px;
+}
+
+footer a{
+  color:@main-font-color;
+  font-family: Jura;
+  font-size: 12px;
+
+
+}
+
+#imprint {
+  height:550px;
+  width:100%;
+  overflow:scroll;
+  overflow-x: hidden;
+}

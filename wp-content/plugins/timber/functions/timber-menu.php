@@ -24,7 +24,7 @@ class TimberMenu extends TimberCore {
             $this->import($menu_info);
             $this->ID = $this->term_id;
         } else {
-            WPHelper::error_log("Sorry, the menu you were looking for wasn't found ('".$slug."'). Here's what Timber did find:");
+            TimberHelper::error_log("Sorry, the menu you were looking for wasn't found ('".$slug."'). Here's what Timber did find:");
         }
         return null;
     }
@@ -46,7 +46,7 @@ class TimberMenu extends TimberCore {
             $index[$item->ID] = new TimberMenuItem($item);
         }
         foreach($index as $item) {
-            if($item->menu_item_parent) {
+            if($item->menu_item_parent && isset($index[$item->menu_item_parent])) {
                 $index[$item->menu_item_parent]->add_child($item);
             } else {
                 $menu[] = $item;

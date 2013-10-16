@@ -8,9 +8,10 @@
     {% include 'html-header.twig' %}  
 
     <body class="{{body_class}}" data-source="base.twig">
-        {#<canvas style="display:none" id="canvas" width="570" height="570"></canvas>#}
-        {#<canvas style="display:none" id="canvas3" width="570" height="570"></canvas>#}
-        {#<canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>#}
+        <canvas style="display:none" id="canvas" width="570" height="570"></canvas>
+        <canvas style="display:none" id="canvas3" width="570" height="570"></canvas>
+        <canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>
+        
         <div id='main-container'>          
             {% include 'header.twig' %}
             <section id="content" role="main" class="wrapper">
@@ -30,6 +31,7 @@
             </section>
             {% include 'footer.twig' %}
         </div>
+        
         {# Include Wordpress Footer which contains enqueued  scripts see functions.php #}
         {{ wp_footer }}
     </body>

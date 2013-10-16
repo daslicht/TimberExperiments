@@ -72,7 +72,7 @@
             var $canvas3 = $('#canvas3');
             var ctx3 = $canvas3[0].getContext('2d');
             $(img).bind('load',null, function() {  ctx3.drawImage(img, 0,0, 570, 570);  loop(); });
-            img.src = '/wp-content/themes/marcwensauer/images/cloud.jpg';
+            img.src = '/wp-content/themes/marcwensauer/images/backgrounds/cloud.jpg';
         
     })(jQuery);  
 //});

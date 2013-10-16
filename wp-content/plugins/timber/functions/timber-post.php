@@ -1,5 +1,5 @@
 <?php
-
+ 
 class TimberPost extends TimberCore {
 
 	var $ImageClass = 'TimberImage';
@@ -114,7 +114,7 @@ class TimberPost extends TimberCore {
 
 	function get_post_id_by_name($post_name) {
 		global $wpdb;
-		$query = "SELECT ID FROM $wpdb->posts WHERE post_name = '$post_name'";
+		$query = "SELECT ID FROM $wpdb->posts WHERE post_name = '$post_name' LIMIT 1";
 		$result = $wpdb->get_row($query);
 		return $result->ID;
 	}
@@ -131,14 +131,14 @@ class TimberPost extends TimberCore {
 		$trimmed = false;
 		if (isset($this->post_excerpt) && strlen($this->post_excerpt)) {
 			if ($force) {
-				$text = WPHelper::trim_words($this->post_excerpt, $len);
+				$text = TimberHelper::trim_words($this->post_excerpt, $len);
 				$trimmed = true;
 			} else {
 				$text = $this->post_excerpt;
 			}
 		}
 		if (!strlen($text)) {
-			$text = WPHelper::trim_words($this->get_content(), $len, false);
+			$text = TimberHelper::trim_words($this->get_content(), $len, false);
 			$trimmed = true;
 		}
 		if (!strlen(trim($text))) {
@@ -426,7 +426,10 @@ class TimberPost extends TimberCore {
 
 	//This is for integration with Elliot Condon's wonderful ACF
 	function get_field($field_name) {
-		return $this->get_field($field_name, $this->ID);
+		if (function_exists('get_field')){
+			return get_field($field_name, $this->ID);
+		}
+		return get_post_meta($this->ID, $field, true);
 	}
 
 	function import_field($field_name) {
