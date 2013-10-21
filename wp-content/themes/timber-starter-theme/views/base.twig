@@ -2,38 +2,51 @@
 <!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" {{language_attributes}}> <![endif]-->
 <!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" {{language_attributes}}> <![endif]-->
 <!--[if IE 8]><html class="no-js ie ie8 lt-ie9" {{language_attributes}}> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" {{language_attributes}}> <!--<![endif]-->
-
-    {% include 'html-header.twig' %}  
+<!--[if gt IE 8]><!--><html class="no-js" {{language_attributes}}> <!--<![endif]-->
+{% include 'html-header.twig' %}
+{% block head %}
+{% endblock %}
 
     <body class="{{body_class}}" data-source="base.twig">
-        <canvas style="display:none" id="canvas" width="570" height="570"></canvas>
-        <canvas style="display:none" id="canvas3" width="570" height="570"></canvas>
-        <canvas id="canvas2" width="570" height="570">*** THIS BROWSER DOES NOT SUPPORT THE CANVAS ELEMENT ***</canvas>
-        
-        <div id='main-container'>          
-            {% include 'header.twig' %}
-            <section id="content" role="main" class="wrapper">
-                {% if title %}<h1>{{title}}</h1>{% endif %}
+        <header class="header" >
+            {% block header %}
+            <div class="wrapper">
 
-                <div class="wrapper {{sidebar_class}}">
-                    {% block content %}
-                        Sorry, no content
-                    {% endblock %}
-                </div>
+                <h1 class="hdr-logo" role="banner">
+                    <a class="hdr-logo-link" href="/" title="Timber" rel="home">{{bloginfo('name')}}</a>
+                </h1>
+                <nav id="access" class="main-navigation" role="navigation">
+                    <ul>
+                    {% for item in menu.items %}
+                        <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
+                            <a href="{{item.link}}">{{item.title}}</a>
+                        </li>
+                    {% endfor %}
+                    </ul>
+                </nav><!-- #access -->
 
-                {% if sidebar %}
-                    <aside class="layout-sidebar">
-                        {{sidebar}}
-                    </aside>
-                {% endif %}
-            </section>
+            </div>
+            {% endblock %}
+        </header>
+
+
+        <section id="content" role="main" class="content-wrapper">
+            {% if title %}<h1>{{title}}</h1>{% endif %}
+            <div class="wrapper {{sidebar_class}}">
+                {% block content %}
+                    Sorry, no content
+                {% endblock %}
+            </div>
+            {% if sidebar %}
+                <aside class="layout-sidebar">
+                    {{sidebar}}
+                </aside>
+            {% endif %}
+        </section>
+
+        <footer id="footer">
             {% include 'footer.twig' %}
-        </div>
-        
-        {# Include Wordpress Footer which contains enqueued  scripts see functions.php #}
-        {{ wp_footer }}
+        </footer>
+        {{ function('wp_footer') }}
     </body>
-
 </html>
