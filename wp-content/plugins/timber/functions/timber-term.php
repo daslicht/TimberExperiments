@@ -63,7 +63,7 @@ class TimberTerm extends TimberCore {
 		}
 		$tid = self::get_tid($tid);
 		global $wpdb;
-		$query = "SELECT * FROM $wpdb->term_taxonomy WHERE term_id = '$tid' LIMIT 1";
+		$query = $wpdb->prepare("SELECT * FROM $wpdb->term_taxonomy WHERE term_id = %d LIMIT 1", $tid);
 		$tax = $wpdb->get_row($query);
 		if (isset($tax) && isset($tax->taxonomy)) {
 			if ($tax->taxonomy) {
@@ -83,9 +83,9 @@ class TimberTerm extends TimberCore {
 			$tid = $tid->term_id;
 		}
 		if (is_numeric($tid)) {
-			$query = "SELECT * FROM $wpdb->terms WHERE term_id = '$tid'";
+			$query = $wpdb->prepare("SELECT * FROM $wpdb->terms WHERE term_id = %d", $tid);
 		} else {
-			$query = "SELECT * FROM $wpdb->terms WHERE slug = '$tid'";
+			$query = $wpdb->prepare("SELECT * FROM $wpdb->terms WHERE slug = %s", $tid);
 		}
 
 		$result = $wpdb->get_row($query);
@@ -97,19 +97,16 @@ class TimberTerm extends TimberCore {
 	}
 
 	function get_path() {
-		return get_term_link($this);
+		$link = $this->get_link();
+		return TimberHelper::get_rel_url($link);
 	}
 
 	function get_link() {
-		return $this->get_path();
+		return get_term_link($this);
 	}
 
 	function get_url() {
-		$base = $this->taxonomy;
-		if ($base == 'post_tag') {
-			$base = 'tag';
-		}
-		return $base . '/' . $this->slug;
+		return $this->get_link();
 	}
 
 	function get_posts($numberposts = 10, $post_type = 'any', $PostClass = '') {
@@ -131,12 +128,18 @@ class TimberTerm extends TimberCore {
 	/* Alias
 	====================== */
 
+	public function link(){
+		return $this->get_link();
+	}
+
+	public function path(){
+		return $this->get_path();
+	}
+
 	public function url(){
 		return $this->get_url();
 	}
 
-	public function link(){
-		return $this->get_link();
-	}
+	
 
 }

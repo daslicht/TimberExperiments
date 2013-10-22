@@ -1,0 +1,7 @@
+{% extends "tease.twig" %}
+{% block content %}
+    <a href="{{post.permalink}}">
+        <h2 class="h2"> {{post.title}} </h2>
+    </a>
+    <p>{{post.get_preview(25)}}</p>
+{% endblock %}

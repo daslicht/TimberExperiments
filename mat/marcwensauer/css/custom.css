@@ -1,0 +1,17 @@
+#wpadminbar{
+    display: none !important;
+
+}
+.site-footer{
+    
+}
+
+#allPosts {
+    width:80%;
+}
+#allPosts th{
+    font-weight: bold !important;
+}
+#content {
+    padding:50px;
+}

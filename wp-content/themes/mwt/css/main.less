@@ -1,0 +1,444 @@
+/*
+ASCI ART GENERATOR:
+http://patorjk.com/software/taag/#p=display&f=Big&t=NAVIGATION
+*/
+
+@import "lib.less";
+
+a {
+  text-decoration: none;
+  color : @main-font-color;
+}
+
+a:visited {
+  color : @main-font-color;
+}
+
+
+* {
+  font-family: @fontA;
+}
+
+body {
+  color:@main-font-color;
+  overflow-y:scroll;
+
+}
+
+//  __  __          _____ _   _    _____ ____  _   _ _______       _____ _   _ ______ _____
+// |  \/  |   /\   |_   _| \ | |  / ____/ __ \| \ | |__   __|/\   |_   _| \ | |  ____|  __ \
+// | \  / |  /  \    | | |  \| | | |   | |  | |  \| |  | |  /  \    | | |  \| | |__  | |__) |
+// | |\/| | / /\ \   | | | . ` | | |   | |  | | . ` |  | | / /\ \   | | | . ` |  __| |  _  /
+// | |  | |/ ____ \ _| |_| |\  | | |___| |__| | |\  |  | |/ ____ \ _| |_| |\  | |____| | \ \
+// |_|  |_/_/    \_\_____|_| \_|  \_____\____/|_| \_|  |_/_/    \_\_____|_| \_|______|_|  \_\
+//
+
+          #main_container {
+            margin: 0 auto;
+            width:980px;
+            padding-top: 50px;
+
+            background:  rgba(255,255,255,0.75);
+
+          //.borderRadius( @top-left, @top-right, @bottom-left, @bottom-right )
+          //.border-radius(0px,0px,5px,5px);
+
+          }
+          //    #main_container h2 {
+          //      font-family: Play;
+          //      font-size:16px;
+          //    }
+
+          #main_container .section {
+            margin-bottom: 18px;
+          }
+
+
+          #main_container .section p {
+            line-height: 1.8;
+          /*padding:15px;*/
+            font-family: Jura;
+            word-spacing: 0.2em;
+            padding-right:10px;
+            padding-bottom:10px;
+          }
+
+//   _____ ____  _   _ _______ ______ _   _ _______      _____ ____  _   _ _______       _____ _   _ ______ _____
+//  / ____/ __ \| \ | |__   __|  ____| \ | |__   __|    / ____/ __ \| \ | |__   __|/\   |_   _| \ | |  ____|  __ \
+// | |   | |  | |  \| |  | |  | |__  |  \| |  | |      | |   | |  | |  \| |  | |  /  \    | | |  \| | |__  | |__) |
+// | |   | |  | | . ` |  | |  |  __| | . ` |  | |      | |   | |  | | . ` |  | | / /\ \   | | | . ` |  __| |  _  /
+// | |___| |__| | |\  |  | |  | |____| |\  |  | |      | |___| |__| | |\  |  | |/ ____ \ _| |_| |\  | |____| | \ \
+//  \_____\____/|_| \_|  |_|  |______|_| \_|  |_|       \_____\____/|_| \_|  |_/_/    \_\_____|_| \_|______|_|  \_\
+
+      #content_container {
+        padding-top: 25px;
+        //padding-left: 25px;
+        //padding-right: 25px;
+        .box-shadow(0px, 6px, 13px, 1px, rgba(0, 0, 0, 0.25));
+
+      }
+
+
+
+//  _    _ ______          _____  ______ _____
+// | |  | |  ____|   /\   |  __ \|  ____|  __ \
+// | |__| | |__     /  \  | |  | | |__  | |__) |
+// |  __  |  __|   / /\ \ | |  | |  __| |  _  /
+// | |  | | |____ / ____ \| |__| | |____| | \ \
+// |_|  |_|______/_/    \_\_____/|______|_|  \_\
+
+
+      header a h1{
+        font-size: 54px;
+        margin-left: 25px;
+        font-family: Jura;
+      /*text-shadow: 1px 1px 0px #ffffff;*/
+      }
+
+      header a h2 {
+        font-size: 16px;
+        font-family: Play;
+        margin-left: 27px;
+        line-height: 2;
+        text-shadow: 1px 1px 0px #ffffff;
+      }
+      header {
+        width: 980px;
+        margin:0px auto;
+        position: relative;
+        background:  rgba(255,255,255,0.75);
+
+      }
+      .header {
+        margin-top:25px;
+        .border-radius(5px, 5px, 0px, 0px );
+        padding-top:25px;
+      }
+
+
+//  _   _     __      _______ _____       _______ _____ ____  _   _
+// | \ | |   /\ \    / /_   _/ ____|   /\|__   __|_   _/ __ \| \ | |
+// |  \| |  /  \ \  / /  | || |  __   /  \  | |    | || |  | |  \| |
+// | . ` | / /\ \ \/ /   | || | |_ | / /\ \ | |    | || |  | | . ` |
+// | |\  |/ ____ \  /   _| || |__| |/ ____ \| |   _| || |__| | |\  |
+// |_| \_/_/    \_\/   |_____\_____/_/    \_\_|  |_____\____/|_| \_|
+
+
+      #main-navigation {
+        position:absolute;
+        top:131px;
+      }
+      nav {
+        height: 30px;
+        width: 100%;
+       // background: rgba(69, 88, 104, 0.5);
+        background:  #9EA9BA;//rgb(158, 169, 178);
+        border-bottom: 2px solid rgba(69, 88, 104, 0.5);
+       // margin-top: 15px;
+        z-index: 999;
+
+      }
+      nav ul {
+        padding: 0;
+      //width: 244px;
+        height: 30px;
+        margin-left: 12px;
+      }
+
+      nav li {
+        display: inline;
+        float: left;
+      }
+
+      nav a {
+        padding-left:15px;
+        padding-right:15px;
+        color: #fff;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        line-height: 31px;
+        padding-top: 1px;
+      }
+
+      nav li a {
+        border-right: 1px solid #576979;
+        .box-sizing(border-box);
+        .transition(color,125ms);
+      }
+
+      nav li:last-child a {
+        border-right: 0;
+      }
+
+      html.no-js{
+        color:@active-color;
+      }
+      //    body.no-jQuery nav a:hover, body.no-jQuery nav a:active, nav .active {
+      //      color:@active-color;
+      //      //background-color: #8c99a4;
+      //      // text-shadow: 1px 1px 0px #283744;
+      //    }
+
+      nav ul .current-menu-item a{
+        color:@active-color;
+        text-shadow: 1px 1px 1px rgba(54, 47, 66, 0.37);
+      //border: 1px;
+        //margin-left: -1px;
+        //margin-top: -1px;
+      }
+
+      nav ul a:hover{
+        color:@active-color;
+      //  text-shadow: 1px 1px 1px rgba(54, 47, 66, 0.37);      //border: 1px;
+      //margin-left: -1px;
+      //margin-top: -1px;
+      }
+
+
+
+
+//  _____   ____   _____ _______
+// |  __ \ / __ \ / ____|__   __|
+// | |__) | |  | | (___    | |
+// |  ___/| |  | |\___ \   | |
+// | |    | |__| |____) |  | |
+// |_|     \____/|_____/   |_|
+//
+
+    .tease img {
+      float:left;
+      margin: 15px 15px 50px 0;
+      opacity:0.9;
+      .border-radius(5px, 5px, 5px, 5px );
+
+    }
+
+    .tease {
+      clear:both;
+      margin-bottom:40px;
+      height:132px;
+      .transition(background,125ms);
+      padding:25px;
+
+
+
+
+      //background-color: red;
+    }
+
+    .tease:hover{
+      background:  rgba(255, 252, 229, 0.6);
+      .border-radius(5px, 5px, 5px, 5px );
+      height:132px;
+
+
+    }
+
+    .tease p {
+      margin-top:10px;
+      width:575px;
+    }
+    .read-more {
+      color:@active-color;
+    }
+
+    .teaser-link div:hover {
+      background: rgba(255,255,255,0.6);
+      .border-radius(5px, 5px, 5px, 5px );
+      height:132px;
+      width: 930px;
+      position:absolute;
+      text-align: right;
+      font-size:16px
+    }
+
+    .teaser-link div p{
+      position:absolute;
+      right:50px;
+      top:50px;
+    }
+
+//   _____ ____  _   _ _______       _____ _______   ______ ____  _____  __  __
+//  / ____/ __ \| \ | |__   __|/\   / ____|__   __| |  ____/ __ \|  __ \|  \/  |
+// | |   | |  | |  \| |  | |  /  \ | |       | |    | |__ | |  | | |__) | \  / |
+// | |   | |  | | . ` |  | | / /\ \| |       | |    |  __|| |  | |  _  /| |\/| |
+// | |___| |__| | |\  |  | |/ ____ \ |____   | |    | |   | |__| | | \ \| |  | |
+//  \_____\____/|_| \_|  |_/_/    \_\_____|  |_|    |_|    \____/|_|  \_\_|  |_|
+
+
+
+        .contact_form {
+          margin-top: 34px !important;
+        }
+            contact_form .contact_row {
+              margin-bottom: 25px;
+            /*background-color: red;*/
+            }
+
+            .contact_form  .last {
+              margin-bottom: 0 !important;
+            }
+            .contact_form .contact_row label{
+              width:150px;
+              text-align: right;
+              margin-right: 15px;
+              float:left;
+              font-family: Jura;
+              margin-top:5px;
+            }
+            .contact_form .contact_row input,
+            .contact_form .contact_row  textarea
+            {
+              background:  rgba(255,255,255,0.75);
+              .border-radius(5px,5px,5px,5px);
+
+              font-size:14px;
+              font-family: Jura;
+              border: 1px solid rgba(69, 88, 104,0.25);
+              padding:5px;
+              width:200px;
+
+              color: #3D4470;
+            }
+            .contact_form .contact_row  textarea{
+              height:124px;
+              width:324px;
+            }
+
+            .contact_row .submit {
+              .border-radius(5px,5px,5px,5px);
+              margin-left:400px;
+              font-family: Jura;
+              color: #ffffff;
+              font-size: 16px;
+              padding: 5px;
+              width:100px;
+              text-decoration: none;
+              border: 1px solid #84a8f0;
+              background-color: #94A2AF;
+              display:inline-block; /* IE is so silly */
+              margin-bottom:25px;
+              margin-top:10px;
+            }
+
+            .contact_row .submit:hover {
+            /*background: #8c9ade;*/
+              opacity:0.75;
+            }
+
+            .notice {
+              width: 100%;
+              height: 50px;
+              background: rgba(255,0,0,0.25);
+              .border-radius(5px,5px,5px,5px);
+              display:none
+            }
+            .v_error {
+              opacity:0;
+              margin-left: 171px;
+              color:red;
+            }
+
+            #email_sent img {
+              float:left;
+              opacity:0.75;
+              margin-right:10px;
+            }
+            #email_sent{
+
+              opacity:0;
+              position:absolute;
+              display:none;
+            }
+            #email_sent p {
+              float:left;
+            }
+
+
+
+//   _____          _   ___      __      _____
+//  / ____|   /\   | \ | \ \    / /\    / ____|
+// | |       /  \  |  \| |\ \  / /  \  | (___
+// | |      / /\ \ | . ` | \ \/ / /\ \  \___ \
+// | |____ / ____ \| |\  |  \  / ____ \ ____) |
+//  \_____/_/    \_\_| \_|   \/_/    \_\_____/
+
+    #canvas2{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top:0;
+    }
+
+
+
+
+
+//  _____ __  __ _____  _____  _____ _   _ _______
+// |_   _|  \/  |  __ \|  __ \|_   _| \ | |__   __|
+//   | | | \  / | |__) | |__) | | | |  \| |  | |
+//   | | | |\/| |  ___/|  _  /  | | | . ` |  | |
+//  _| |_| |  | | |    | | \ \ _| |_| |\  |  | |
+// |_____|_|  |_|_|    |_|  \_\_____|_| \_|  |_|
+
+
+    #imprint {
+      height:550px;
+      width:100%;
+      overflow:scroll;
+      overflow-x: hidden;
+    }
+
+
+    #imprint h5, #imprint p {
+      font-family: Play;
+      font-size: 14px;
+    }
+
+    #imprint p {
+      font-family: Play;
+      font-size: 12px;
+    }
+
+
+//  ______ ____   ____ _______ ______ _____
+// |  ____/ __ \ / __ \__   __|  ____|  __ \
+// | |__ | |  | | |  | | | |  | |__  | |__) |
+// |  __|| |  | | |  | | | |  |  __| |  _  /
+// | |   | |__| | |__| | | |  | |____| | \ \
+// |_|    \____/ \____/  |_|  |______|_|  \_\
+
+
+    footer{
+      width:250px;
+      margin:0 auto;
+      text-align: center;
+
+      opacity:.75;
+      margin-bottom: 5px;
+    }
+
+    footer a{
+      color:@main-font-color;
+      font-family: Jura;
+      font-size: 12px;
+
+
+    }
+
+
+
+
+//#header{
+//  width: 100%; background-color: red;
+//  border: 1px solid black;height:40px;}
+//#header_stick{
+//  width: 100%; background-color: black;
+//  border: 1px dotted grey;color:white;}
+//.stick{
+//  position:absolute;top:0;opacity:0.7;}
+//h1{
+//  font-size: 130%; padding-bottom:1px;}
+//.pad{padding-top:21px;}

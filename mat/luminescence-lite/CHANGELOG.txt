@@ -1,0 +1,57 @@
+Keep a change log to describe all the changes made to program source files. The purpose of this is so that people investigating bugs in the future will know about the changes that might have introduced the bug. Often a new bug can be found by looking at what was recently changed. More importantly, change logs can help you eliminate conceptual inconsistencies between different parts of a program, by giving you a history of how the conflicting concepts arose and who they came from.
+
+Copyright 2012-2013 StyledThemes.com
+
+	
+Changelog Legend:
+----
+
+[+] = Added
+[*] = Changed
+[^] = Moved
+[=] = No Changes
+[x] = Deleted
+[!] = Bugs
+
+
+----
+
+(October 13, 2013) Version 1.0.5 Styled Themes <www.styledthemes.com>
+[+] Added meta title to front page which was missing
+
+----
+
+(October 9, 2013) Version 1.0.4 Styled Themes <www.styledthemes.com>
+[*] Changed the form button styling to match the Pro version styling
+[*] Logo site title and tagline now centers in the sidebar column
+[+] Added the ability to show a date button when no featured image is used
+
+----
+
+(September 26, 2013) Version 1.0.3 Styled Themes <www.styledthemes.com>
+[+] Added new feature to allow different logo and site title styles
+[*] Updated the language luminescence.pot file
+
+----
+
+(September 25, 2013) Version 1.0.2 Styled Themes <www.styledthemes.com>
+[*] Changed post titles to say Untitled if no title is entered
+[*] Updated the searchform.php file action url
+[*] Updated the language luminescence.pot file
+
+----
+
+(September 24, 2013) Version 1.0.1 Styled Themes <www.styledthemes.com>
+[!] Fixed a language issue where translations were not available using the luminescence text domain
+[*] Updated the language luminescence.pot file
+[*] Updated the search-loop.php file
+[x] Removed the content-search.php file
+[!] Fixed comments not showing on pages
+[+] Added css for extra long words for word wrap.
+
+----
+
+(September 18, 2013) Version 1.0.0 Styled Themes <www.styledthemes.com>
+Initial Release
+
+----

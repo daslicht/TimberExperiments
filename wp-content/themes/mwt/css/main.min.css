@@ -1,0 +1,354 @@
+@import url(http://fonts.googleapis.com/css?family=Jura|Play);
+
+/*
+ASCI ART GENERATOR:
+http://patorjk.com/software/taag/#p=display&f=Big&t=NAVIGATION
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+a {
+  color: #3d4470;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #3d4470;
+}
+
+* {
+  font-family: Play;
+}
+
+body {
+  overflow-y: scroll;
+  color: #3d4470;
+}
+
+#main_container {
+  width: 980px;
+  padding-top: 50px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+#main_container .section {
+  margin-bottom: 18px;
+}
+
+#main_container .section p {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  font-family: Jura;
+  line-height: 1.8;
+  word-spacing: 0.2em;
+}
+
+#content_container {
+  padding-top: 25px;
+  -webkit-box-shadow: 0 6px 13px 1px rgba(0, 0, 0, 0.25) outer;
+     -moz-box-shadow: 0 6px 13px 1px rgba(0, 0, 0, 0.25) outer;
+          box-shadow: 0 6px 13px 1px rgba(0, 0, 0, 0.25) outer;
+}
+
+header a h1 {
+  margin-left: 25px;
+  font-family: Jura;
+  font-size: 54px;
+}
+
+header a h2 {
+  margin-left: 27px;
+  font-family: Play;
+  font-size: 16px;
+  line-height: 2;
+  text-shadow: 1px 1px 0px #ffffff;
+}
+
+header {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.header {
+  padding-top: 25px;
+  margin-top: 25px;
+  -webkit-border-radius: 5px 5px 0 0px;
+     -moz-border-radius: 5px 5px 0 0px;
+          border-radius: 5px 5px 0 0px;
+}
+
+#main-navigation {
+  position: absolute;
+  top: 131px;
+}
+
+nav {
+  z-index: 999;
+  width: 100%;
+  height: 30px;
+  background: #9EA9BA;
+  border-bottom: 2px solid rgba(69, 88, 104, 0.5);
+}
+
+nav ul {
+  height: 30px;
+  padding: 0;
+  margin-left: 12px;
+}
+
+nav li {
+  display: inline;
+  float: left;
+}
+
+nav a {
+  display: inline-block;
+  padding-top: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  line-height: 31px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav li a {
+  border-right: 1px solid #576979;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: color 125ms ease-in-out 0ms;
+     -moz-transition: color 125ms ease-in-out 0ms;
+       -o-transition: color 125ms ease-in-out 0ms;
+          transition: color 125ms ease-in-out 0ms;
+}
+
+nav li:last-child a {
+  border-right: 0;
+}
+
+html.no-js {
+  color: #ffa500;
+}
+
+nav ul .current-menu-item a {
+  color: #ffa500;
+  text-shadow: 1px 1px 1px rgba(54, 47, 66, 0.37);
+}
+
+nav ul a:hover {
+  color: #ffa500;
+}
+
+.tease img {
+  float: left;
+  margin: 15px 15px 50px 0;
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+  opacity: 0.9;
+}
+
+.tease {
+  height: 132px;
+  padding: 25px;
+  margin-bottom: 40px;
+  clear: both;
+  -webkit-transition: background 125ms ease-in-out 0ms;
+     -moz-transition: background 125ms ease-in-out 0ms;
+       -o-transition: background 125ms ease-in-out 0ms;
+          transition: background 125ms ease-in-out 0ms;
+}
+
+.tease:hover {
+  height: 132px;
+  background: rgba(255, 252, 229, 0.6);
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+}
+
+.tease p {
+  width: 575px;
+  margin-top: 10px;
+}
+
+.read-more {
+  color: #ffa500;
+}
+
+.teaser-link div:hover {
+  position: absolute;
+  width: 930px;
+  height: 132px;
+  font-size: 16px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+}
+
+.teaser-link div p {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+}
+
+.contact_form {
+  margin-top: 34px !important;
+}
+
+contact_form .contact_row {
+  margin-bottom: 25px;
+  /*background-color: red;*/
+
+}
+
+.contact_form .last {
+  margin-bottom: 0 !important;
+}
+
+.contact_form .contact_row label {
+  float: left;
+  width: 150px;
+  margin-top: 5px;
+  margin-right: 15px;
+  font-family: Jura;
+  text-align: right;
+}
+
+.contact_form .contact_row input,
+.contact_form .contact_row textarea {
+  width: 200px;
+  padding: 5px;
+  font-family: Jura;
+  font-size: 14px;
+  color: #3D4470;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(69, 88, 104, 0.25);
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+}
+
+.contact_form .contact_row textarea {
+  width: 324px;
+  height: 124px;
+}
+
+.contact_row .submit {
+  display: inline-block;
+  width: 100px;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  margin-left: 400px;
+  font-family: Jura;
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #94A2AF;
+  border: 1px solid #84a8f0;
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+}
+
+.contact_row .submit:hover {
+  /*background: #8c9ade;*/
+
+  opacity: 0.75;
+}
+
+.notice {
+  display: none;
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 0, 0, 0.25);
+  -webkit-border-radius: 5px 5px 5px 5px;
+     -moz-border-radius: 5px 5px 5px 5px;
+          border-radius: 5px 5px 5px 5px;
+}
+
+.v_error {
+  margin-left: 171px;
+  color: red;
+  opacity: 0;
+}
+
+#email_sent img {
+  float: left;
+  margin-right: 10px;
+  opacity: 0.75;
+}
+
+#email_sent {
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+
+#email_sent p {
+  float: left;
+}
+
+#canvas2 {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+#imprint {
+  width: 100%;
+  height: 550px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#imprint h5,
+#imprint p {
+  font-family: Play;
+  font-size: 14px;
+}
+
+#imprint p {
+  font-family: Play;
+  font-size: 12px;
+}
+
+footer {
+  width: 250px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  text-align: center;
+  opacity: .75;
+}
+
+footer a {
+  font-family: Jura;
+  font-size: 12px;
+  color: #3d4470;
+}

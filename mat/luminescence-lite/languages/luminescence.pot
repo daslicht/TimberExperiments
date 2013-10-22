@@ -1,0 +1,829 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Luminescence Lite 1.0.2\n"
+"POT-Creation-Date: 2013-03-27 20:19-0800\n"
+"PO-Revision-Date: 2013-09-25 21:45-0800\n"
+"Last-Translator: Styled Themes <mail@address>\n"
+"Language-Team: Styled Themes <mail@address>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr_e;_x;_n\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:22
+msgid "Error Page"
+msgstr ""
+
+#: 404.php:77
+msgid "Error 404"
+msgstr ""
+
+#: 404.php:79
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:80
+msgid "You may not be able to visit this page because:"
+msgstr ""
+
+#: 404.php:82
+msgid ""
+"The Page you are looking for does not exist or an other error occurred.<br /"
+">Please go back to the Home Page or try searching for your page."
+msgstr ""
+
+#: 404.php:87
+msgid "Home Page"
+msgstr ""
+
+#: archive-full.php:24 archive-left.php:28 archive-right.php:25
+#, php-format
+msgid "Articles for this day of %s"
+msgstr ""
+
+#: archive-full.php:26 archive-left.php:30 archive-right.php:27
+#, php-format
+msgid "Articles for the Month of %s"
+msgstr ""
+
+#: archive-full.php:28 archive-left.php:32 archive-right.php:29
+#, php-format
+msgid "Articles for the Year %s"
+msgstr ""
+
+#: archive-full.php:30 archive-left.php:34 archive-right.php:31
+msgid "Articles"
+msgstr ""
+
+#: author-full.php:33 author-left.php:37 author-right.php:33
+#, php-format
+msgid "Articles By %s"
+msgstr ""
+
+#: author-full.php:54 author-left.php:58 author-right.php:54
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: blog-full.php:21 blog-left.php:25 blog-right.php:24
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: blog-full.php:23 blog-left.php:27 blog-right.php:26 category.php:31
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: category.php:43
+msgid "Categories: "
+msgstr ""
+
+#: comments.php:35
+#, php-format
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgstr ""
+
+#: comments.php:46
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:47
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:48
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:55
+msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:1
+msgid "Aside"
+msgstr ""
+
+#: content-aside.php:1
+msgid "Published: "
+msgstr ""
+
+#: content-aside.php:1
+msgid "Permalink "
+msgstr ""
+
+#: content-image.php:20 content.php:20
+msgid "M"
+msgstr ""
+
+#: content-image.php:27
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-image.php:33 content.php:40
+msgid "Discussion: "
+msgstr ""
+
+#: content-image.php:34 content.php:41
+msgid "No Comments"
+msgstr ""
+
+#: content-image.php:34 content.php:41
+msgid "1 Comment"
+msgstr ""
+
+#: content-image.php:34 content.php:41
+msgid "% Comments"
+msgstr ""
+
+#: content-image.php:47 content-portfolio2.php:22 content-portfolio3.php:20
+#: content-portfolio4.php:23
+msgid "See More..."
+msgstr ""
+
+#: content-none.php:1
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:1
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr ""
+
+#: content-page.php:26 content.php:61 image.php:91
+msgid "Pages:"
+msgstr ""
+
+#: content-page.php:30 content-quote.php:1 content-status.php:1 content.php:67
+msgid "Edit"
+msgstr ""
+
+#: content-portfolio1.php:20
+msgid " See More..."
+msgstr ""
+
+#: content-quote.php:1
+msgid "Read More..."
+msgstr ""
+
+#: content-singleportfolio.php:17
+msgid "<span class=\"modified-date\">Last Modified: </span> "
+msgstr ""
+
+#: content-status.php:1
+msgid "Update By: "
+msgstr ""
+
+#: content-status.php:1
+msgid "Date: "
+msgstr ""
+
+#: content-status.php:1
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content.php:29
+#, php-format
+msgid "Permanent Link to %s"
+msgstr ""
+
+#: content.php:32
+msgid "Featured Article"
+msgstr ""
+
+#: content.php:60 includes/functions.php:190
+msgid "Continue Reading..."
+msgstr ""
+
+#: content.php:65
+msgid "<span class=\"meta-tagged\">Tagged with:</span>"
+msgstr ""
+
+#: content.php:66
+#, php-format
+msgid "<span class=\"meta-posted\">Posted in: %s</span>"
+msgstr ""
+
+#: header.php:72
+msgid "Menu"
+msgstr ""
+
+#: image.php:33
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time> "
+"<span class=\"mini\">in</span> <a href=\"%6$s\" title=\"Return to %7$s\" rel="
+"\"gallery\">%8$s</a></span> <br />Image Size: <a href=\"%3$s\" title=\"Link "
+"to full-size image\">%4$s &times; %5$s</a>."
+msgstr ""
+
+#: image.php:96
+msgid "Previous Photo"
+msgstr ""
+
+#: image.php:97
+msgid "Next Photo"
+msgstr ""
+
+#: includes/comment-form.php:34
+msgid "Pingback:"
+msgstr ""
+
+#: includes/comment-form.php:34
+msgid "(Edit)"
+msgstr ""
+
+#: includes/comment-form.php:53
+msgid "&#40;Post author&#41;"
+msgstr ""
+
+#: includes/comment-form.php:59
+#, php-format
+msgid "<span class=\"comment-date\">Commented on: %1$s</span>"
+msgstr ""
+
+#: includes/comment-form.php:62
+msgid "<strong>Edit</strong> this comment"
+msgstr ""
+
+#: includes/comment-form.php:67
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: includes/comment-form.php:75
+msgid "<strong>Reply</strong> to this Comment"
+msgstr ""
+
+#: includes/comment-form.php:113
+msgid "Name*"
+msgstr ""
+
+#: includes/comment-form.php:128
+msgid "Email*"
+msgstr ""
+
+#: includes/comment-form.php:140
+msgid "Website"
+msgstr ""
+
+#: includes/comment-form.php:150
+msgid "Comment*"
+msgstr ""
+
+#: includes/comment-form.php:153
+msgid "Leave a reply"
+msgstr ""
+
+#: includes/comment-form.php:154
+#, php-format
+msgid "Leave a reply to %s"
+msgstr ""
+
+#: includes/comment-form.php:155
+#, php-format
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr ""
+
+#: includes/comment-form.php:156
+#, php-format
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+
+#: includes/functions.php:70
+msgid "Primary Menu"
+msgstr ""
+
+#: includes/functions.php:71
+msgid "Footer Menu"
+msgstr ""
+
+#: includes/functions.php:72
+msgid "Sub-Header Menu"
+msgstr ""
+
+#: includes/functions.php:73
+msgid "Portfolio Menu"
+msgstr ""
+
+#: includes/functions.php:169
+#, php-format
+msgid "<span class=\"%3$s\"> Author: </span>%4$s"
+msgstr ""
+
+#: includes/functions.php:320
+msgid "Post navigation"
+msgstr ""
+
+#: includes/functions.php:321
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: includes/functions.php:322
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: includes/theme-customizer.php:22
+msgid "Customize Encounters"
+msgstr ""
+
+#: includes/theme-customizer.php:22
+msgid "Theme Options"
+msgstr ""
+
+#: includes/theme-customizer.php:47
+msgid "Your Logo"
+msgstr ""
+
+#: includes/theme-customizer.php:56
+msgid "Basic Settings"
+msgstr ""
+
+#: includes/theme-customizer.php:70
+msgid "Page Width"
+msgstr ""
+
+#: includes/theme-customizer.php:74 includes/theme-customizer.php:92
+#: includes/theme-customizer.php:108 includes/theme-customizer.php:124
+msgid "Full Width"
+msgstr ""
+
+#: includes/theme-customizer.php:75
+msgid "Boxed 1170"
+msgstr ""
+
+#: includes/theme-customizer.php:76
+msgid "Boxed 980"
+msgstr ""
+
+#: includes/theme-customizer.php:86
+msgid "Blog Sidebar Column"
+msgstr ""
+
+#: includes/theme-customizer.php:90 includes/theme-customizer.php:106
+#: includes/theme-customizer.php:122
+msgid "Right Column"
+msgstr ""
+
+#: includes/theme-customizer.php:91 includes/theme-customizer.php:107
+#: includes/theme-customizer.php:123
+msgid "Left Column"
+msgstr ""
+
+#: includes/theme-customizer.php:102
+msgid "Archive Sidebar Column"
+msgstr ""
+
+#: includes/theme-customizer.php:118
+msgid "Author Sidebar Column"
+msgstr ""
+
+#: includes/theme-customizer.php:134
+msgid "Intro Image"
+msgstr ""
+
+#: includes/theme-customizer.php:138
+msgid "Big Image"
+msgstr ""
+
+#: includes/theme-customizer.php:139
+msgid "Small Image"
+msgstr ""
+
+#: includes/theme-customizer.php:149
+msgid "Portfolio Columns"
+msgstr ""
+
+#: includes/theme-customizer.php:153
+msgid "Portfolio 1"
+msgstr ""
+
+#: includes/theme-customizer.php:154
+msgid "Portfolio 2"
+msgstr ""
+
+#: includes/theme-customizer.php:155
+msgid "Portfolio 3"
+msgstr ""
+
+#: includes/theme-customizer.php:156
+msgid "Portfolio 4"
+msgstr ""
+
+#: includes/theme-customizer.php:172
+msgid "Background Colour"
+msgstr ""
+
+#: includes/theme-customizer.php:183
+msgid "Top Border"
+msgstr ""
+
+#: includes/theme-customizer.php:194
+msgid "Header Border"
+msgstr ""
+
+#: includes/theme-customizer.php:205
+msgid "Content Background"
+msgstr ""
+
+#: includes/theme-customizer.php:216
+msgid "Content Bottom Border"
+msgstr ""
+
+#: includes/theme-customizer.php:226
+msgid "Headings &amp; Titles"
+msgstr ""
+
+#: includes/theme-customizer.php:236
+msgid "Content Text Colour"
+msgstr ""
+
+#: includes/theme-customizer.php:247
+msgid "Bottom Border"
+msgstr ""
+
+#: includes/theme-customizer.php:258
+msgid "Bottom Text Colour"
+msgstr ""
+
+#: includes/theme-customizer.php:269
+msgid "Bottom Heading Colour"
+msgstr ""
+
+#: includes/theme-customizer.php:283
+msgid "Bottom Link Colour"
+msgstr ""
+
+#: includes/theme-customizer.php:294
+msgid "Bottom Link Hover"
+msgstr ""
+
+#: includes/theme-customizer.php:305
+msgid "Bottom List Border"
+msgstr ""
+
+#: includes/theme-customizer.php:320
+msgid "Footer Background"
+msgstr ""
+
+#: includes/theme-customizer.php:332
+msgid "Footer Bottom Border"
+msgstr ""
+
+#: includes/theme-customizer.php:343
+msgid "Footer Text"
+msgstr ""
+
+#: includes/theme-customizer.php:354
+msgid "Footer Links"
+msgstr ""
+
+#: includes/theme-customizer.php:365
+msgid "Footer Link Hover"
+msgstr ""
+
+#: includes/theme-customizer.php:384
+msgid "Blog Date Box"
+msgstr ""
+
+#: includes/theme-customizer.php:395
+msgid "Blog Date Colour"
+msgstr ""
+
+#: includes/theme-customizer.php:407
+msgid "Social Networking"
+msgstr ""
+
+#: includes/theme-customizer.php:418
+msgid "Social Bar"
+msgstr ""
+
+#: includes/theme-customizer.php:431
+msgid "Twitter"
+msgstr ""
+
+#: includes/theme-customizer.php:443
+msgid "Facebook"
+msgstr ""
+
+#: includes/theme-customizer.php:455
+msgid "Google+"
+msgstr ""
+
+#: includes/theme-customizer.php:467
+msgid "Linkedin"
+msgstr ""
+
+#: includes/theme-customizer.php:479
+msgid "Pinterest"
+msgstr ""
+
+#: includes/theme-customizer.php:491
+msgid "RSS"
+msgstr ""
+
+#: includes/theme-customizer.php:505
+msgid "Showcase Outer Background"
+msgstr ""
+
+#: includes/theme-customizer.php:517
+msgid "Showcase Inner Background"
+msgstr ""
+
+#: includes/theme-customizer.php:530
+msgid "Showcase Padding"
+msgstr ""
+
+#: includes/theme-customizer.php:542
+msgid "Banner Padding"
+msgstr ""
+
+#: includes/theme-customizer.php:553
+msgid "Banner Background"
+msgstr ""
+
+#: includes/theme-customizer.php:566
+msgid "Banner width"
+msgstr ""
+
+#: includes/theme-customizer.php:581
+msgid "Main Menu Top Margin"
+msgstr ""
+
+#: includes/theme-customizer.php:591
+msgid "Main Menu Link"
+msgstr ""
+
+#: includes/theme-customizer.php:602
+msgid "Main Menu Link Hover"
+msgstr ""
+
+#: includes/theme-customizer.php:614
+msgid "Submenu Background Hover"
+msgstr ""
+
+#: includes/theme-customizer.php:625
+msgid "Submenu Link Hover"
+msgstr ""
+
+#: includes/theme-customizer.php:636
+msgid "Main Menu Submenu Active"
+msgstr ""
+
+#: includes/theme-customizer.php:647
+msgid "Submenu Active Link"
+msgstr ""
+
+#: includes/theme-customizer.php:658
+msgid "Submenu Active Background"
+msgstr ""
+
+#: includes/widgets.php:26
+msgid "Blog Right Sidebar"
+msgstr ""
+
+#: includes/widgets.php:28
+msgid ""
+"This is the right sidebar column that appears on the blog but not the pages."
+msgstr ""
+
+#: includes/widgets.php:35
+msgid "Blog Left Sidebar"
+msgstr ""
+
+#: includes/widgets.php:37
+msgid ""
+"This is the left sidebar column that appears on the blog but not the pages."
+msgstr ""
+
+#: includes/widgets.php:45
+msgid "Page Right Sidebar"
+msgstr ""
+
+#: includes/widgets.php:47
+msgid ""
+"This is the right sidebar column that appears on pages, but not part of the "
+"blog"
+msgstr ""
+
+#: includes/widgets.php:54
+msgid "Page Left Sidebar"
+msgstr ""
+
+#: includes/widgets.php:56
+msgid ""
+"This is the left sidebar column that appears on pages, but not part of the "
+"blog"
+msgstr ""
+
+#: includes/widgets.php:63
+msgid "Showcase Header"
+msgstr ""
+
+#: includes/widgets.php:65
+msgid ""
+"This is a showcase banner for images or media sliders that can display on "
+"your pages."
+msgstr ""
+
+#: includes/widgets.php:72
+msgid "Banner Header"
+msgstr ""
+
+#: includes/widgets.php:74
+msgid ""
+"This is a full width banner for images or media sliders that can display on "
+"your pages."
+msgstr ""
+
+#: includes/widgets.php:81
+msgid "Call to Action"
+msgstr ""
+
+#: includes/widgets.php:83
+msgid ""
+"This is a call to action promo heading area above the main content just "
+"under the showcase header."
+msgstr ""
+
+#: includes/widgets.php:90
+msgid "Top 1"
+msgstr ""
+
+#: includes/widgets.php:92
+msgid ""
+"This is the first top widget position located at the top of the page content."
+msgstr ""
+
+#: includes/widgets.php:99
+msgid "Top 2"
+msgstr ""
+
+#: includes/widgets.php:101
+msgid ""
+"This is the second top widget position located at the top of the page "
+"content."
+msgstr ""
+
+#: includes/widgets.php:108
+msgid "Top 3"
+msgstr ""
+
+#: includes/widgets.php:110
+msgid ""
+"This is the third top widget position located at the top of the page content."
+msgstr ""
+
+#: includes/widgets.php:117
+msgid "Top 4"
+msgstr ""
+
+#: includes/widgets.php:119
+msgid ""
+"This is the fourth top widget position located at the top of the page "
+"content."
+msgstr ""
+
+#: includes/widgets.php:126
+msgid "Content Top 1"
+msgstr ""
+
+#: includes/widgets.php:128
+msgid ""
+"This is the first Content Top widget position located at the top of the page "
+"content."
+msgstr ""
+
+#: includes/widgets.php:135
+msgid "Content Top 2"
+msgstr ""
+
+#: includes/widgets.php:137
+msgid ""
+"This is the second Content Top widget position located at the top of the "
+"page content."
+msgstr ""
+
+#: includes/widgets.php:144
+msgid "Content Top 3"
+msgstr ""
+
+#: includes/widgets.php:146
+msgid ""
+"This is the third Content Top widget position located at the top of the page "
+"content."
+msgstr ""
+
+#: includes/widgets.php:153
+msgid "Content Top 4"
+msgstr ""
+
+#: includes/widgets.php:155
+msgid ""
+"This is the fourth Content Top widget position located at the top of the "
+"page content."
+msgstr ""
+
+#: includes/widgets.php:162
+msgid "Inset Top"
+msgstr ""
+
+#: includes/widgets.php:164
+msgid ""
+"This is a full width span widget position just above the main content and "
+"left right columns."
+msgstr ""
+
+#: includes/widgets.php:171
+msgid "Inset Bottom"
+msgstr ""
+
+#: includes/widgets.php:173
+msgid "This is a full width span widget position just below the main content."
+msgstr ""
+
+#: includes/widgets.php:180
+msgid "Content Bottom 1"
+msgstr ""
+
+#: includes/widgets.php:182
+msgid ""
+"This is the first content bottom widget position located in a coloured "
+"background area."
+msgstr ""
+
+#: includes/widgets.php:189
+msgid "Content Bottom 2"
+msgstr ""
+
+#: includes/widgets.php:191
+msgid ""
+"This is the second content bottom widget position located in a coloured "
+"background area."
+msgstr ""
+
+#: includes/widgets.php:198
+msgid "Content Bottom 3"
+msgstr ""
+
+#: includes/widgets.php:200
+msgid ""
+"This is the third content bottom widget position located in a coloured "
+"background area."
+msgstr ""
+
+#: includes/widgets.php:207
+msgid "Content Bottom 4"
+msgstr ""
+
+#: includes/widgets.php:209
+msgid ""
+"This is the fourth content bottom widget position located in a coloured "
+"background area."
+msgstr ""
+
+#: includes/widgets.php:216
+msgid "Bottom 1"
+msgstr ""
+
+#: includes/widgets.php:218
+msgid ""
+"This is the first bottom widget position located in a coloured background "
+"area and shows only on the Front page and full width templates."
+msgstr ""
+
+#: includes/widgets.php:225
+msgid "Bottom 2"
+msgstr ""
+
+#: includes/widgets.php:227
+msgid ""
+"This is the second bottom widget position located in a coloured background "
+"area and shows only on the Front page and full width templates."
+msgstr ""
+
+#: includes/widgets.php:234
+msgid "Bottom 3"
+msgstr ""
+
+#: includes/widgets.php:236
+msgid ""
+"This is the third bottom widget position located in a coloured background "
+"area and shows only on the Front page and full width templates."
+msgstr ""
+
+#: includes/widgets.php:243
+msgid "Bottom 4"
+msgstr ""
+
+#: includes/widgets.php:245
+msgid ""
+"This is the fourth bottom widget position located in a coloured background "
+"area and shows only on the Front page and full width templates."
+msgstr ""
